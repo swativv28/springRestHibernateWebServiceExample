@@ -17,21 +17,21 @@
  <url-pattern>/</url-pattern>
 </servlet-mapping>
 
-<security-constraint>
-         <web-resource-collection>
-             <web-resource-name>Orders</web-resource-name>
-             <url-pattern>/welcome.jsp</url-pattern>
-             <http-method>GET</http-method>
-             <http-method>POST</http-method>
-         </web-resource-collection>
-         <auth-constraint>
-             <role-name>admin</role-name> 
-         </auth-constraint>
+	<security-constraint>
+	    <web-resource-collection>
+	        <web-resource-name>Orders</web-resource-name>
+	        <url-pattern>/welcome.jsp</url-pattern>
+	        <http-method>GET</http-method>
+	        <http-method>POST</http-method>
+	    </web-resource-collection>
+	    <auth-constraint>
+	        <role-name>admin</role-name> 
+	    </auth-constraint>
     </security-constraint>
-        <login-config>
-            <auth-method>BASIC</auth-method>
-            <realm-name>default</realm-name>
-        </login-config>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>default</realm-name>
+    </login-config>
     <security-role>
         <role-name>admin</role-name>
     </security-role>
